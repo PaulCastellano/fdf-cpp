@@ -30,3 +30,23 @@ float   POINT::getY() {
 float   POINT::getZ() {
     return (this->z);
 }
+
+//MAP COLORS
+int    MAP_COLORS::getRX() {
+    return (this->rX);
+}
+int    MAP_COLORS::getGX() {
+    return (this->gX);
+}
+int    MAP_COLORS::getBX() {
+    return (this->bX);
+}
+int    MAP_COLORS::getRY() {
+    return (this->rY);
+}
+int    MAP_COLORS::getGY() {
+    return (this->gY);
+}
+int    MAP_COLORS::getBY() {
+    return (this->bY);
+}

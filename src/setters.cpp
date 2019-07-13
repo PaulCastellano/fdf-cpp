@@ -29,3 +29,14 @@ void    POINT::setY(float y) {
 void    POINT::setZ(float z) {
     this->z = z;
 }
+//MAP Colors
+void    MAP_COLORS::setRGBX(int rX, int gX, int bX) {
+    this->rX = rX;
+    this->gX = gX;
+    this->bX = bX;
+}
+void    MAP_COLORS::setRGBY(int rY, int gY, int bY) {
+    this->rY = rY;
+    this->gY = gY;
+    this->bY = bY;
+}

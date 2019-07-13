@@ -1,5 +1,26 @@
 #include "common.h"
 
+class   MAP_COLORS {
+    private:
+        int rX;
+        int gX;
+        int bX;
+        int rY;
+        int gY;
+        int bY;
+    public:
+        //setters
+        void    setRGBX(int rX, int gX, int bX);
+        void    setRGBY(int rY, int gY, int bY);
+        //Getters
+        int    getRX();
+        int    getGX();
+        int    getBX();
+        int    getRY();
+        int    getGY();
+        int    getBY();
+};
+
 class POINT {
     private:
         float x;
@@ -18,6 +39,7 @@ class POINT {
 
 class FDF_MAP {
     private:
+        MAP_COLORS  **mapColors;
         POINT   **map;
         int     width;
         int     height;
@@ -38,6 +60,7 @@ class FDF_MAP {
         void    setPointsDistance();
         void    setCoordX(float coordX);
         void    setCoordY(float coordY);
+        void    resetMap();
 
         //Getters
         POINT   **getMap();

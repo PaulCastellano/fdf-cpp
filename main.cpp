@@ -19,7 +19,7 @@ int main(int ac, char **av) {
 	SDL_Window	*window = SDL_CreateWindow("FDF C++", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, fdfMap.getWindowWidth(), fdfMap.getWindowHeight(), SDL_WINDOW_OPENGL);
     SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, 0);
 	//Main Loop
-		fdfMap.setFileName("test/test2.txt");
+		fdfMap.setFileName("test/test1.txt");
 		fdfMap.readMapFromFile();
 		fdfMap.setPointsDistance();
 	while (isRunning) {
@@ -56,10 +56,12 @@ int main(int ac, char **av) {
 			fdfMap.translationForward();
 		} else if (keyState[SDL_SCANCODE_DOWN]) {
 			fdfMap.translationBack();
-		} else if (ev.key.keysym.sym == SDLK_p) {
-			//fdfMap.scalingPlus();
-		} else if (ev.key.keysym.sym == SDLK_m) {
-			//fdfMap.scalingMinus();
+		} else if (keyState[SDL_SCANCODE_P]) {
+			fdfMap.scalingPlus();
+		} else if (keyState[SDL_SCANCODE_M]) {
+			fdfMap.scalingMinus();
+		} else if (keyState[SDL_SCANCODE_R]) {
+			fdfMap.resetMap();
 		}
 		fdfMap.showMap(renderer);
 	}

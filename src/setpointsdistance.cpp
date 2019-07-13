@@ -17,3 +17,9 @@ void    FDF_MAP::setPointsDistance() {
         }
     }
 }
+
+void    FDF_MAP::resetMap(){
+    delete this->map;
+    this->readMapFromFile();
+    this->setPointsDistance();
+}
